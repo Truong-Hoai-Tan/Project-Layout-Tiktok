@@ -1,0 +1,127 @@
+.wrapper{
+    height: var(--default-layout-header-height);
+    display: flex;
+    box-shadow: 8px 1px 1px rgb(0 0 0 / 12%);
+    justify-content: center;
+    width: 100%;
+}
+
+.inner{
+    height: 100%;
+    width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-spacer);
+}
+
+.header-search, 
+.search-result{
+    width: 361px;
+}
+
+.header-search{
+    position: relative;
+    width: 361px;
+    height: 46px;
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    display: flex;
+    padding-left: 16px;
+    border: 1.5px solid transparent;
+
+
+    input{
+        flex: 1;
+        color: #000;
+        font-size: 1.6rem;
+        border: none;
+        background-color: transparent;
+        height: 100%;
+        caret-color: red;
+    }
+
+    input:not(:placeholder-shown) ~ .header-btn{
+        color: rgba(22, 24, 35, 0.75);;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: 9px;
+        right: 52px;
+        height: 28px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    &:focus-within{
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.search-result-title{
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 5px 12px;
+}
+
+.header-clear,
+.header-loading{
+    position: absolute;
+    right: 68px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.header-btn{
+    width: 52px;
+    height: 100%;
+    font-size: 2.5rem;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    color: rgba(22, 24, 35, 0.34);
+
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active{
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.header-actions{
+    display: flex;
+    align-items: center;
+
+}
+
+.header-morebtn{
+    font-size: 2rem;
+    margin-left: 24px;
+    background: transparent;
+    padding: 6px;
+    transform: translateY(20%);
+    cursor: pointer;
+}
+
+.header-actions-btn{
+    color: #161823;
+    background-color: transparent;
+    font-size: 2.6rem;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.user-avt{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 1.2rem;
+}
+
